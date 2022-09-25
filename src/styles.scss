@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/mixins";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  font-family: "Inter", Roboto, sans-serif;
+  button {
+    background: none;
+  }
+}
+
+:root{
+  --primary: #ff0000;
+  --primary-hover: #831313;
+  --text-primary: #000000;
+  --text-primary-hover: #222;
+  --text-primary-contrast: #000;
+  --background: #FFFFFF;
+  --background-menu: #fff;
+  --background-menu-hover: #dedede;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --padding-1: 8px;
+  --padding-2: 16px;
+  --padding-3: 24px;
+}
+
+:root .dark-theme{
+  --primary: #ff0000;
+  --primary-hover: #831313;
+  --text-primary: #fff;
+  --text-primary-hover: #fff;
+  --text-primary-contrast: #000;
+  --background: #181818;
+  --background-menu: #202020;
+  --background-menu-hover: #2b2b2b;
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+html { 
+  font-size: 10px;
+  @include xl {
+    font-size: 9.6px;
+  }
+  @include lg {
+    font-size: 9px;
+  }
+  @include md {
+    font-size: 8.5px;
+  }
+  @include sm {
+    font-size: 8px;
+  }
+}
+  
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+a, button, svg {
+  cursor: pointer;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
