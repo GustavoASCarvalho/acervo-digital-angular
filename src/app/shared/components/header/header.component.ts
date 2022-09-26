@@ -84,6 +84,5 @@ export class HeaderComponent implements OnInit {
         this.fecharMenu();
       }
     });
-    this.abrirMenu();
   }
 }
