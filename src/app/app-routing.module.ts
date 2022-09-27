@@ -7,10 +7,18 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    data: {
+      title: 'Acervo Digital de Paranaguá',
+      desc: 'Descubra a história de Paranaguá através de fotos, documentos e publicações de especialistas.',
+    },
   },
   {
     path: 'about',
     component: AboutComponent,
+    data: {
+      title: 'Sobre o Acervo Digital de Paranaguá',
+      desc: 'Conheça a história do projeto e a equipe que está por trás dele.',
+    },
   },
 ];
 

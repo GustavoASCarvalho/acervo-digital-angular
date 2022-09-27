@@ -1,23 +1,10 @@
 @import "./assets/styles/mixins";
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  outline: 0;
-  list-style: none;
-  font-family: "Inter", Roboto, sans-serif;
-  button {
-    background: none;
-  }
-}
+@import "./assets/styles/reset";
 
 :root{
   --primary: #ff0000;
   --primary-hover: #831313;
+  --icons-primary: #000;
   --text-primary: #000000;
   --text-primary-hover: #222;
   --text-primary-contrast: #000;
@@ -33,6 +20,7 @@
 :root .dark-theme{
   --primary: #ff0000;
   --primary-hover: #831313;
+  --icons-primary: #fff;
   --text-primary: #fff;
   --text-primary-hover: #fff;
   --text-primary-contrast: #000;
@@ -43,28 +31,30 @@
 }
 
 html { 
-  font-size: 10px;
+  font-size: 13px;
   @include xl {
-    font-size: 9.8px;
+    font-size: 12.75px;
   }
   @include lg {
-    font-size: 9.6px;
+    font-size: 12.5px;
   }
   @include md {
-    font-size: 9.4px;
+    font-size: 12.25px;
   }
   @include sm {
-    font-size: 9.2px;
+    font-size: 12px;
+  }
+  & * {
+    font-family: "Inter", Roboto, sans-serif;
+  }
+  a, button, svg {
+    cursor: pointer;
   }
 }
   
 body {
   background-color: var(--background);
   color: var(--text-primary);
-}
-
-a, button, svg {
-  cursor: pointer;
 }
 
 * {
