@@ -387,22 +387,22 @@
                     transition-delay: 100ms;
                 }
                 &:nth-of-type(2){
-                    transition-delay: 250ms;
+                    transition-delay: 200ms;
                 }
                 &:nth-of-type(3){
-                    transition-delay: 400ms;
+                    transition-delay: 300ms;
                 }
                 &:nth-of-type(4){
-                    transition-delay: 550ms;
+                    transition-delay: 400ms;
                 }
                 &:nth-of-type(5){
-                    transition-delay: 700ms;
+                    transition-delay: 500ms;
                 }
                 &:nth-of-type(6){
-                    transition-delay: 850ms;
+                    transition-delay: 600ms;
                 }
                 &:nth-of-type(7){
-                    transition-delay: 850ms;
+                    transition-delay: 600ms;
                 }
                 &:hover {
                     background-color: var(--background-menu-hover);
@@ -423,28 +423,31 @@
                     }
                 }
             }
-            .icons {
-                position: absolute;
-                bottom: 10px;
-                left: 10px;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                background-color: var(--background-menu-hover);
-                padding: var(--padding-1);
-                border-radius: 20px;
+        }
+        .icons {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background-color: var(--background-menu-hover);
+            padding: var(--padding-1);
+            border-radius: 20px;
+            transform: translateX(0);
+            transition: transform 400ms ease;
+            transition-delay: 700ms;
+            svg {
+                opacity: 0.8;
+                transition: opacity 0.5s ease;
+            }
+            p{
+                margin-left: 10px;
+                font-size: 1.4rem;
+            }
+            &:hover{
                 svg {
-                    opacity: 0.8;
-                    transition: opacity 0.5s ease;
-                }
-                p{
-                    margin-left: 10px;
-                    font-size: 1.4rem;
-                }
-                &:hover{
-                    svg {
-                        opacity: 1;
-                    }
+                    opacity: 1;
                 }
             }
         }
@@ -452,6 +455,9 @@
     &.hide {
         transform: translateX(-110%);
         ul li {
+            transform: translateX(-110%);
+        }
+        .icons {
             transform: translateX(-110%);
         }
     }

@@ -1,8 +1,16 @@
 import { Component } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  update: boolean = false;
+  constructor(update: SwUpdate) {
+    update.versionUpdates.subscribe((e) => {
+      update.activateUpdate().then(() => document.location.reload());
+    });
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ThemeService } from 'src/app/core/theme.service';
 
 @Component({
@@ -6,15 +6,13 @@ import { ThemeService } from 'src/app/core/theme.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   usuarioLogado = false;
   estaBuscando = false;
 
   @Input() indexSelecionado: number = 0;
 
   constructor(private themeService: ThemeService) {}
-
-  ngOnInit() {}
 
   mostrarBusca() {
     document.querySelector('.header__menu')?.classList.add('hide');
@@ -50,20 +48,10 @@ export class HeaderComponent implements OnInit {
   }
 
   isDarkTheme() {
-    console.log('isDarkTheme', this.themeService.darkTheme);
     return this.themeService.darkTheme;
   }
 
-  trocarPagina(index: number) {
-    document.body
-      .querySelectorAll('li a')
-      [this.indexSelecionado].classList.remove('active');
-    document.body.querySelectorAll('li a')[index].classList.add('active');
-    this.indexSelecionado = index;
-  }
-
   ngAfterViewInit() {
-    this.trocarPagina(this.indexSelecionado);
     window.addEventListener('scroll', (_) => {
       let heigth = window.scrollY;
       if (heigth > 0) {
