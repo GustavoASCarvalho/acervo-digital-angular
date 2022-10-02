@@ -31,6 +31,13 @@ svg {
             display: flex;
             align-items: center;
             justify-content: center;
+            &:focus-visible {
+                svg {
+                    outline: 2px solid var(--focus);
+                    border-radius: 3px;
+                    outline-offset: 2px;
+                }
+            }
         }
         &__title {
             display: flex;
@@ -60,7 +67,8 @@ svg {
                 align-items: center;
                 justify-content: center;
                 li {
-                    padding: var(--padding-1);
+                    // padding: var(--padding-1);
+                    margin-inline: 10px;
                     display: flex;
                     align-items: center;
                     cursor: pointer;
@@ -99,6 +107,10 @@ svg {
                                 transform: translate3d(0,0,0); 
                             }
                         }
+                        &:focus-visible {
+                            outline: 2px solid var(--focus);
+                            border-radius: 1px;
+                        }
                     }
                     &:active {
                         background-color: var(--background-menu-hover);
@@ -133,11 +145,26 @@ svg {
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                &:focus-visible {
+                    svg {
+                        outline: 2px solid var(--focus);
+                        border-radius: 3px;
+                        outline-offset: 2px;
+                    }
+                }
             }
     
             &__profile {
                 padding-left: var(--padding-1);
                 padding-right: var(--padding-3);
+                
+                &:focus-visible {
+                    svg {
+                        outline: 2px solid var(--focus);
+                        border-radius: 3px;
+                        outline-offset: 2px;
+                    }
+                }
             }
     
             &__login {
@@ -154,9 +181,14 @@ svg {
                     font-weight: 500;
                     border-radius: 4px;
                     transition: background-color 0.2s ease-in-out;
-                    &:hover,&:focus {
+                    &:hover{
                         background-color: var(--primary-hover);
                         box-shadow: 0 0 2px 2px var(--box-shadow-color);
+                    }
+                    &:focus-visible {
+                        outline: 2px solid var(--focus);
+                        border-radius: 4px;
+                        outline-offset: 3px;
                     }
                 }
             }
@@ -192,21 +224,33 @@ svg {
         right: 0;
         z-index: 300;
         &__icon{
-            opacity: 0.5;
             position: absolute;
             top: 15px;
             left: 12px;
             transform: translateX(0);
             transition: all 400ms ease;
             transition-delay: 300ms;
+            &:focus-visible {
+                svg {
+                    outline: 2px solid var(--focus);
+                    border-radius: 3px;
+                    outline-offset: 2px;
+                }
+            }
         }
         &__close{
-            opacity: 0.5;
             transition: all 400ms ease;
             transition-delay: 400ms;
             position: absolute;
             top: 15px;
             right: 12px;
+            &:focus-visible {
+                svg {
+                    outline: 2px solid var(--focus);
+                    border-radius: 3px;
+                    outline-offset: 2px;
+                }
+            }
         }
         &__bar{
             form {
@@ -279,7 +323,7 @@ svg {
                     text-decoration: none;
                     font-weight: 400;
                     border-radius: 4px;
-                    &:hover, &:focus {
+                    &:hover, &:focus-visible {
                         background-color: var(--background-menu-hover);
                         color: var(--primary);
                     }
@@ -295,7 +339,7 @@ svg {
                     transform: translateX(-100px);
                 }
                 &__close {
-                    opacity: 0.5;
+                    opacity: 0;
                 }
             }
             form, h2{
@@ -345,6 +389,13 @@ svg {
         align-items: center;
         justify-content: flex-start;
         border-bottom: 2px solid var(--background-menu-hover);
+        &:focus-visible {
+            svg {
+                outline: 2px solid var(--focus);
+                border-radius: 3px;
+                outline-offset: 2px;
+            }
+        }
     }
     &__menu {
         ul {
@@ -379,9 +430,7 @@ svg {
                 &:nth-of-type(7){
                     transition-delay: 600ms;
                 }
-                &:hover {
-                    background-color: var(--background-menu-hover);
-                }
+               
                 a {
                     padding: var(--padding-2);
                     display: flex;
@@ -394,6 +443,13 @@ svg {
                     p {
                         border-left: 2px solid var(--primary);
                         padding-left: 10px;
+                    }
+                    &:hover, &:focus-visible {
+                        background-color: var(--background-menu-hover);
+                    }
+                      &:focus-visible {
+                        outline: 2px solid var(--focus);
+                        outline-offset: -2px;
                     }
                 }
             }
@@ -423,10 +479,16 @@ svg {
                     opacity: 1;
                 }
             }
+            &:focus-visible {
+                outline: 2px solid var(--focus);
+                border-radius: 20px;
+                outline-offset: 2px;
+            }
         }
     }
     &.hide {
         transform: translateX(-110%);
+        pointer-events: none;
         ul li {
             transform: translateX(-110%);
         }
