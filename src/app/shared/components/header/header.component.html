@@ -14,14 +14,24 @@
         <nav class="header__menu__menu">
             <ul>
                 <li><a [attr.tabindex]="estado == 0 ? 0 : -1" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}" [routerLink]="['']">Página
-                        Inicial</a></li>
+                        [routerLinkActiveOptions]="{exact: true}" [routerLink]="['']"><span>
+                            <div class="text">Página
+                                Inicial</div>
+                        </span></a></li>
                 <li><a [attr.tabindex]="estado == 0 ? 0 : -1" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/acervo']">Acervo</a></li>
+                        [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/acervo']"><span>
+                            <div class="text">Acervo</div>
+                        </span></a>
+                </li>
                 <li><a [attr.tabindex]="estado == 0 ? 0 : -1" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/postagens']">Postagens</a></li>
+                        [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/postagens']"><span>
+                            <div class="text"> Postagens</div>
+                        </span></a></li>
                 <li><a [attr.tabindex]="estado == 0 ? 0 : -1" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/explore']">Explore</a></li>
+                        [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/explore']"><span>
+                            <div class="text">Explore</div>
+                        </span></a>
+                </li>
             </ul>
         </nav>
         <div class="header__menu__search">
