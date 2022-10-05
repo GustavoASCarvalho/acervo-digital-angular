@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './card-carousel.component.html',
   styleUrls: ['./card-carousel.component.scss'],
 })
-export class CardCarouselComponent implements OnInit {
+export class CardCarouselComponent {
   @Input()
   itens: any[] = [
     {
@@ -29,9 +29,7 @@ export class CardCarouselComponent implements OnInit {
       imageUrl: 'https://picsum.photos/800/1200?random=5',
     },
   ];
-  constructor() {}
 
-  ngOnInit(): void {}
   ngAfterViewInit() {
     const cards = document.querySelectorAll('.content__slider__card');
     cards.forEach((cardMouse, iMouse) => {
