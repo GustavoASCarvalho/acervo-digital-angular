@@ -1,0 +1,13 @@
+<div class="content">
+    <h2>Destaques da semana</h2>
+    <section class="content__slider">
+        <div class="content__slider__card" *ngFor="let item of itens" tabindex="0">
+            <div class="content__slider__card__image" [ngStyle]="{'background-image': 'url('+ item.imageUrl +')'}">
+            </div>
+            <div class="content__slider__card__text">
+                <h3>{{item.title}}</h3>
+            </div>
+            <div class="content__slider__card__overlay"></div>
+        </div>
+    </section>
+</div>

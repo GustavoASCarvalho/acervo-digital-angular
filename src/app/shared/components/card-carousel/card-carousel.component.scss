@@ -1,0 +1,267 @@
+@import "../../../../assets/styles/mixins";
+
+.content {
+    --translate-5: translate3d(-80%, 0, 0);
+    --translate-4: translate3d(-40%, 0, 0);
+    --translate-3: translate3d(0, 0, 0);
+    --translate-2: translate3d(40%, 0, 0);
+    --translate-1: translate3d(80%, 0, 0);
+    @include xl {
+      --translate-5: translate3d(-70%, 0, 0);
+      --translate-4: translate3d(-35%, 0, 0);
+      --translate-3: translate3d(0, 0, 0);
+      --translate-2: translate3d(35%, 0, 0);
+      --translate-1: translate3d(70%, 0, 0);
+    }
+    @include lg {
+      --translate-5: translate3d(-60%, 0, 0);
+      --translate-4: translate3d(-30%, 0, 0);
+      --translate-3: translate3d(0, 0, 0);
+      --translate-2: translate3d(30%, 0, 0);
+      --translate-1: translate3d(60%, 0, 0);
+    }
+    @include md {
+      --translate-5: translate3d(-50%, 0, 0);
+      --translate-4: translate3d(-25%, 0, 0);
+      --translate-3: translate3d(0, 0, 0);
+      --translate-2: translate3d(25%, 0, 0);
+      --translate-1: translate3d(50%, 0, 0);
+    }
+    @include sm {
+      --translate-5: translate3d(-40%, 0, 0);
+      --translate-4: translate3d(-20%, 0, 0);
+      --translate-3: translate3d(0, 0, 0);
+      --translate-2: translate3d(20%, 0, 0);
+      --translate-1: translate3d(40%, 0, 0);
+    }
+    overflow-x: none;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 36px;
+    h2 {
+      font-size: 36px;
+      font-weight: 300;
+      margin: 30px 0;
+    }
+    &__slider {
+      height: 450px;
+      position: relative;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      width: 100%;
+      &__card {
+        background-color: gray;
+        margin: auto;
+        width: 40%;
+        height: 100%;
+        min-width: 200px;
+        min-height: 300px;
+        max-width: 450px;
+        max-height: 450px;
+        border-radius: 10px;
+        position: absolute;
+        left: 0; right: 0;
+        cursor: pointer;
+        transition: transform 500ms cubic-bezier(0.190,1.000,0.220,1.000);
+        overflow: hidden;
+        filter: blur(1px);
+        object-fit: contain;
+        &:nth-child(1) {
+          transform: var(--translate-5) scale3d(0.90, 0.90, 0.90);
+          z-index: 8;
+          will-change: transform;
+        }
+        &:nth-child(2) {
+          transform: var(--translate-4) scale3d(0.95, 0.95, 0.95);
+          z-index: 9;
+        }
+        &:nth-child(3) {
+          transform: var(--translate-3)scale3d(1, 1, 1);
+          z-index: 10;
+        }
+        &:nth-child(4) {
+          transform: var(--translate-2)scale3d(0.95, 0.95, 0.95);
+          z-index: 9;
+        }
+        &:nth-child(5) {
+          transform: var(--translate-1)scale3d(0.90, 0.90, 0.90);
+          z-index: 8;
+        } 
+        &.primeiro {
+          filter: none;
+          &:nth-child(1) {
+            transform: var(--translate-5) scale3d(1, 1, 1);
+          }
+          &:nth-child(2) {
+            transform: var(--translate-4) scale3d(1, 1, 1);
+          }
+          &:nth-child(3) {
+            transform: var(--translate-3)scale3d(1, 1, 1);
+          }
+          &:nth-child(4) {
+            transform: var(--translate-2)scale3d(1, 1, 1);
+          }
+          &:nth-child(5) {
+            transform: var(--translate-1)scale3d(1, 1, 1);
+          }
+          z-index: 10;
+        }
+        &.segundo {
+          &:nth-child(1) {
+            transform: var(--translate-5) scale3d(0.95, 0.95, 0.95);
+          }
+          &:nth-child(2) {
+            transform: var(--translate-4) scale3d(0.95, 0.95, 0.95);
+          }
+          &:nth-child(3) {
+            transform: var(--translate-3)scale3d(0.95, 0.95, 0.95);
+          }
+          &:nth-child(4) {
+            transform: var(--translate-2)scale3d(0.95, 0.95, 0.95);
+          }
+          &:nth-child(5) {
+            transform: var(--translate-1)scale3d(0.95, 0.95, 0.95);
+          }
+          z-index: 9;
+        }
+        &.terceiro {
+          &:nth-child(1) {
+            transform: var(--translate-5) scale3d(0.90, 0.90, 0.90);
+          }
+          &:nth-child(2) {
+            transform: var(--translate-4) scale3d(0.90, 0.90, 0.90);
+          }
+          &:nth-child(3) {
+            transform: var(--translate-3)scale3d(0.90, 0.90, 0.90);
+          }
+          &:nth-child(4) {
+            transform: var(--translate-2)scale3d(0.90, 0.90, 0.90);
+          }
+          &:nth-child(5) {
+            transform: var(--translate-1)scale3d(0.90, 0.90, 0.90);
+          }
+          z-index: 8;
+        }
+        &.quarto {
+          &:nth-child(1) {
+            transform: var(--translate-5) scale3d(0.85, 0.85, 0.85);
+          }
+          &:nth-child(2) {
+            transform: var(--translate-4) scale3d(0.85, 0.85, 0.85);
+          }
+          &:nth-child(3) {
+            transform: var(--translate-3)scale3d(0.85, 0.85, 0.85);
+          }
+          &:nth-child(4) {
+            transform: var(--translate-2)scale3d(0.85, 0.85, 0.85);
+          }
+          &:nth-child(5) {
+            transform: var(--translate-1)scale3d(0.85, 0.85, 0.85);
+          }
+          z-index: 7;
+        }
+        &.quinto {
+          &:nth-child(1) {
+            transform: var(--translate-5) scale3d(0.80, 0.80, 0.80);
+          }
+          &:nth-child(2) {
+            transform: var(--translate-4) scale3d(0.80, 0.80, 0.80);
+          }
+          &:nth-child(3) {
+            transform: var(--translate-3)scale3d(0.80, 0.80, 0.80);
+          }
+          &:nth-child(4) {
+            transform: var(--translate-2)scale3d(0.80, 0.80, 0.80);
+          }
+          &:nth-child(5) {
+            transform: var(--translate-1)scale3d(0.80, 0.80, 0.80);
+          }
+          z-index: 6;
+        }
+        &:hover, &:focus-visible {
+          .content__slider__card__image {
+            -ms-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+
+        }
+        &__image {
+          z-index: 10;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+          -webkit-transition: all .5s;
+          -moz-transition: all .5s;
+          -o-transition: all .5s;
+          transition: all .5s;
+          object-fit: contain;
+        }
+        &__text {
+          padding: var(--padding-2);
+          height: 100%;
+          left: 0;
+          right: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 12;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          justify-content: end;
+          align-items: flex-start;
+          color: var(--text-white);
+          h3 {
+            //deixar o texto que esta sobre a imagem mais visivel
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+            text-shadow: 0 0 10px 2px #000;            
+          }
+        }
+        &__overlay {
+          height: 105%;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 11;
+          background-image: linear-gradient(
+            180deg,
+          hsla(0, 0%, 35.29%, 0) -10%,
+          hsla(0, 0%, 34.53%, 0.034375) 16.36%,
+          hsla(0, 0%, 32.42%, 0.125) 33.34%,
+          hsla(0, 0%, 29.18%, 0.253125) 50.1%,
+          hsla(0, 0%, 24.96%, 0.4) 65.75%,
+          hsla(0, 0%, 19.85%, 0.546875) 79.43%,
+          hsla(0, 0%, 13.95%, 0.675) 90.28%,
+          hsla(0, 0%, 7.32%, 0.765625) 97.43%,
+          hsla(0, 0%, 0%, 0.8) 110%
+          );
+        }
+        &:focus-visible {
+          outline: 2px solid var(--focus);
+          border-radius: 20px;
+          outline-offset: 2px;
+        }
+      }
+    }
+  }   
