@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AcervoComponent } from './modules/acervo/page/acervo/acervo.component';
-import { ExploreComponent } from './modules/explore/page/explore/explore.component';
-import { HomeComponent } from './modules/home/page/home/home.component';
-import { PostagensComponent } from './modules/postagens/page/postagens/postagens.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./modules/home/home.module').then((m) => m.HomeModule),
     data: {
       title: 'Acervo Digital de Paranaguá',
       desc: 'Descubra a história de Paranaguá através de fotos, documentos e publicações de especialistas.',
@@ -16,7 +13,8 @@ const routes: Routes = [
   },
   {
     path: 'explore',
-    component: ExploreComponent,
+    loadChildren: () =>
+      import('./modules/explore/explore.module').then((m) => m.ExploreModule),
     data: {
       title: 'Explore o Acervo Digital de Paranaguá',
       desc: 'Explore o acervo digital de Paranaguá através de fotos, documentos e publicações de especialistas.',
@@ -24,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'acervo',
-    component: AcervoComponent,
+    loadChildren: () =>
+      import('./modules/acervo/acervo.module').then((m) => m.AcervoModule),
     data: {
       title: 'Acervo Digital de Paranaguá',
       desc: 'Descubra a história de Paranaguá através de fotos, documentos, arquivo de jornais, iconografia e muito mais.',
@@ -32,15 +31,14 @@ const routes: Routes = [
   },
   {
     path: 'postagens',
-    component: PostagensComponent,
+    loadChildren: () =>
+      import('./modules/postagens/postagens.module').then(
+        (m) => m.PostagensModule
+      ),
     data: {
       title: 'Postagens sobre Paranaguá e sua história',
       desc: 'Postagens sobre a história de Paranaguá e seus personagens.',
     },
-  },
-  {
-    path: '**',
-    redirectTo: '',
   },
 ];
 
