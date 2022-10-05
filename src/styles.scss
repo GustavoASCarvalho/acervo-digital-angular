@@ -16,6 +16,9 @@
   --padding-2: 16px;
   --padding-3: 24px;
   --focus: rgb(0, 0, 0);
+  --header-height: 56px;
+  --container-space: 80px;
+  --text-white: #fff;
 }
 
 :root .dark-theme{
@@ -33,6 +36,7 @@
   --padding-2: 16px;
   --padding-3: 24px;
   --focus: rgb(255, 255, 255);
+  --text-white: #fff;
 }
 
 html { 
@@ -49,9 +53,6 @@ html {
   @include sm {
     font-size: 12px;
   }
-  & * {
-    font-family: "Inter", Roboto, sans-serif;
-  }
   a, button, svg {
     cursor: pointer;
   }
@@ -60,6 +61,7 @@ html {
 body {
   background-color: var(--background);
   color: var(--text-primary);
+  font-family: 'Inter Tight', sans-serif;
 }
 
 * {
