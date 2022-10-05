@@ -8,7 +8,7 @@ svg {
 
 .header {
     background:var(--background-menu);
-    height: 56px;
+    height: var(--header-height);
     position: fixed;
     left: 0;
     top: 0;
@@ -82,7 +82,7 @@ svg {
                         align-items: center;
                         .text {
                             padding: var(--padding-1);
-                            font-weight: 400;
+                            font-weight: 500;
                             text-decoration: none;
                             color: var(--text-primary);
                             border-top: 3px solid transparent;
@@ -453,6 +453,7 @@ svg {
                     p {
                         border-left: 2px solid var(--primary);
                         padding-left: 10px;
+                        font-weight: 600;
                     }
                     &:hover, &:focus-visible {
                         background-color: var(--background-menu-hover);
