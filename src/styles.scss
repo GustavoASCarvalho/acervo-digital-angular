@@ -19,6 +19,9 @@
   --header-height: 56px;
   --container-space: 80px;
   --text-white: #fff;
+  --button-border: #2b2b2b;
+  --button-background: #fff;
+  --button-background-hover: #dedede;
 }
 
 :root .dark-theme{
@@ -37,6 +40,9 @@
   --padding-3: 24px;
   --focus: rgb(255, 255, 255);
   --text-white: #fff;
+  --button-border: #fff;
+  --button-background: #000;
+  --button-background-hover: #2b2b2b;
 }
 
 html { 
