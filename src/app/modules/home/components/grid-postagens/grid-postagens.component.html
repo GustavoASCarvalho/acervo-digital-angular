@@ -1,0 +1,16 @@
+<section class="postagens">
+    <h2>
+        Confira as histórias por trás de Paranaguá
+    </h2>
+    <div class="postagens__grid">
+        <div class="postagens__grid__card" tabindex="0" *ngFor="let item of itens">
+            <div class="postagens__grid__card__image" [ngStyle]="{'background-image': 'url('+ item.imageUrl +')'}">
+            </div>
+            <a class="postagens__grid__card__text" tabindex="0">
+                <h4>{{item.title}}</h4>
+                <h5>{{item.descricao}}</h5>
+            </a>
+            <div class="postagens__grid__card__overlay"></div>
+        </div>
+    </div>
+</section>

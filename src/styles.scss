@@ -17,11 +17,32 @@
   --padding-3: 24px;
   --focus: rgb(0, 0, 0);
   --header-height: 56px;
-  --container-space: 80px;
+  --container-space: 500px;
   --text-white: #fff;
   --button-border: #2b2b2b;
   --button-background: #fff;
   --button-background-hover: #dedede;
+  --text-primary-margin: 56px;
+  @include xl {
+    font-size: 12.75px;
+    --container-space: 400px;
+    --text-primary-margin: 50px;
+  }
+  @include lg {
+    font-size: 12.5px;
+    --container-space: 300px;
+    --text-primary-margin: 44px;
+  }
+  @include md {
+    font-size: 12.25px;
+    --container-space: 200px;
+    --text-primary-margin: 38px;
+  }
+  @include sm {
+    font-size: 12px;
+    --container-space: 100px;
+    --text-primary-margin: 32px;
+  }
 }
 
 :root .dark-theme{

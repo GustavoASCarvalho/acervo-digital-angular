@@ -31,7 +31,7 @@ export class CardCarouselComponent {
   ];
 
   ngAfterViewInit() {
-    const cards = document.querySelectorAll('.section__card');
+    const cards = document.querySelectorAll('.cards__card');
     cards.forEach((cardMouse, iMouse) => {
       cardMouse.addEventListener('mouseenter', (e) => {
         this.moveCards(cards, cardMouse, iMouse);
