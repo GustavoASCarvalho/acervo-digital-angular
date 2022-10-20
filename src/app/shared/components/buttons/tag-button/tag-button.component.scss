@@ -2,15 +2,21 @@ button {
     border: 1px solid var(--button-border);
     border-radius: 999999px;
     padding: 9px 12px;
-    transition: background-color 0.2s ease;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
     span {
+        transition: all 0.3s ease;
         color: var(--text-primary);
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.25rem;
+      
     }
     &:hover,&:focus-visible {
-        background-color: var(--button-background-hover);
+        background-color: var(--primary);
+        span {
+            color: var(--text-white);
+        }
     }
     &:focus-visible {
         outline: 1px solid var(--focus);
