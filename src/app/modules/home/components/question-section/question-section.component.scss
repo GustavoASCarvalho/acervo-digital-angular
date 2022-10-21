@@ -46,6 +46,9 @@
                 grid-column-end: 3;
                 grid-row-start: 3;
                 grid-row-end: 4;
+                h3 {
+                    text-align: center;
+                }
             }
 
         }
@@ -57,17 +60,21 @@
             max-width: 400px;
             width: 100%;
 
-            align-self: start;
+            align-items: center;
             grid-column-start: 2;
             grid-column-end: 3;
             grid-row-start: 2;
             grid-row-end: 3;
 
             @include lg {
+                justify-self: center;
                 grid-column-start: 1;
                 grid-column-end: 3;
                 grid-row-start: 4;
                 grid-row-end: 5;
+            }
+            > * {
+                justify-self: center;
             }
         }
   
