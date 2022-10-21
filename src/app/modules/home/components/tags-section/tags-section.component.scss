@@ -1,4 +1,8 @@
 .tags {
+  width: calc(100% - var(--container-space));
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

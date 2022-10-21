@@ -1,137 +1,141 @@
 @import "../../../../../assets/styles/mixins";
 
 .postagens {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    h2 {
-      font-size: 3rem;
-      font-weight: 400;
-      margin: var(--text-primary-margin) 0;
-      text-align: center;
-    }
-    &__grid {
-      display: grid;
-      grid-template-columns: 0.7fr 0.8fr 1fr;
+  width: calc(100% - var(--container-space));
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: var(--text-primary-margin) 0;
+    text-align: center;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 0.7fr 0.8fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    height: 40vh;
+
+    @include lg {
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      gap: 10px;
+    }
+
+    &__card {
+      cursor: pointer;
       width: 100%;
-      height: 40vh;
-
-      @include lg {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+      height: 100%;
+      background-color: var(--primary);
+      border-radius: 10px;
+      color: var(--text-white);
+      font-size: 1.2rem;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      &:nth-of-type(1){
+        grid-row: span 2;
+        @include lg {
+          grid-row: span 1;
+        }
       }
-
-      &__card {
-        cursor: pointer;
+      &:nth-of-type(3){
+        grid-row: span 2;
+        @include lg {
+          grid-row: span 1;
+        }
+      }
+      &__image {
+        z-index: 10;
+        position: absolute;
         width: 100%;
         height: 100%;
-        background-color: var(--primary);
-        border-radius: 10px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        background-position: center center;
+      }
+      &__text {
+        padding: var(--padding-2);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 12;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: flex-start;
         color: var(--text-white);
-        font-size: 1.2rem;
-        font-weight: 600;
-        position: relative;
-        overflow: hidden;
-        &:nth-of-type(1){
-          grid-row: span 2;
-          @include lg {
-            grid-row: span 1;
-          }
+        h4 {
+          font-size: 1.3rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
         }
-        &:nth-of-type(3){
-          grid-row: span 2;
-          @include lg {
-            grid-row: span 1;
-          }
+        h5 {
+          font-size: 1rem;
+          font-weight: 400;
         }
-        &__image {
-          z-index: 10;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          right: 0;
-          background-size: cover;
-          background-repeat: no-repeat;
-          -webkit-transition: all .5s;
-          -moz-transition: all .5s;
-          -o-transition: all .5s;
-          transition: all .5s;
-          background-position: center center;
-        }
-        &__text {
-          padding: var(--padding-2);
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          z-index: 12;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          justify-content: flex-end;
-          align-items: flex-start;
-          color: var(--text-white);
-          h4 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-          }
-          h5 {
-            font-size: 1rem;
-            font-weight: 400;
-          }
-          h4,h5 {
-            transition: all .5s ease-out;
-          }
-          &:hover, &:focus-visible {
-            h4, h5 {
-              text-decoration: underline; 
-            }
-          }
-        }
-        &__overlay {
-          height: 105%;
-          width: 100%;
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          z-index: 11;
-          background-image: linear-gradient(
-            180deg,
-          hsla(0, 0%, 35.29%, 0) -10%,
-          hsla(0, 0%, 34.53%, 0.034375) 16.36%,
-          hsla(0, 0%, 32.42%, 0.125) 33.34%,
-          hsla(0, 0%, 29.18%, 0.253125) 50.1%,
-          hsla(0, 0%, 24.96%, 0.4) 65.75%,
-          hsla(0, 0%, 19.85%, 0.546875) 79.43%,
-          hsla(0, 0%, 13.95%, 0.675) 90.28%,
-          hsla(0, 0%, 7.32%, 0.765625) 97.43%,
-          hsla(0, 0%, 0%, 0.8) 110%
-          );
-        }
-        &:focus-visible {
-          outline: 2px solid var(--focus);
-          border-radius: 10px;
-          outline-offset: 2px;
+        h4,h5 {
+          transition: all .5s ease-out;
         }
         &:hover, &:focus-visible {
-          .postagens__grid__card__image {
-            -ms-transform: scale(1.1);
-            -moz-transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-            -o-transform: scale(1.1);
-            transform: scale(1.1);
+          h4, h5 {
+            text-decoration: underline; 
           }
+        }
+      }
+      &__overlay {
+        height: 105%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 11;
+        background-image: linear-gradient(
+          180deg,
+        hsla(0, 0%, 35.29%, 0) -10%,
+        hsla(0, 0%, 34.53%, 0.034375) 16.36%,
+        hsla(0, 0%, 32.42%, 0.125) 33.34%,
+        hsla(0, 0%, 29.18%, 0.253125) 50.1%,
+        hsla(0, 0%, 24.96%, 0.4) 65.75%,
+        hsla(0, 0%, 19.85%, 0.546875) 79.43%,
+        hsla(0, 0%, 13.95%, 0.675) 90.28%,
+        hsla(0, 0%, 7.32%, 0.765625) 97.43%,
+        hsla(0, 0%, 0%, 0.8) 110%
+        );
+      }
+      &:focus-visible {
+        outline: 2px solid var(--focus);
+        border-radius: 10px;
+        outline-offset: 2px;
+      }
+      &:hover, &:focus-visible {
+        .postagens__grid__card__image {
+          -ms-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1);
         }
       }
     }
   }
+}

@@ -2,9 +2,5 @@
 
 .content {
   margin: calc(var(--header-height) + var(--text-primary-margin)) 0;
-  width: calc(100% - var(--container-space));
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   height: auto;
 }
