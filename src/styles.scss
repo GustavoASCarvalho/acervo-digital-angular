@@ -2,13 +2,14 @@
 @import "./assets/styles/reset";
 
 :root{
-  --primary: rgb(130, 10, 209);
-  --primary-hover: rgb(114, 22, 176);
+  --primary: #F6BD60;
+  --primary-hover: #f2af44;
+  --primary-opacity: #84A59D;
   --icons-primary: #000;
   --text-primary: #000000;
   --text-primary-hover: #222;
   --text-primary-contrast: #000;
-  --background: #FFFFFF;
+  --background: #f7ede2;
   --background-menu: #fff;
   --background-menu-hover: #dedede;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
@@ -48,8 +49,9 @@
 }
 
 :root .dark-theme{
-  --primary: rgb(130, 10, 209);
-  --primary-hover: rgb(114, 22, 176);
+  --primary: #F6BD60;
+  --primary-hover: #f2af44;
+  --primary-opacity: #84A59D;
   --icons-primary: #fff;
   --text-primary: #fff;
   --text-primary-hover: #fff;
