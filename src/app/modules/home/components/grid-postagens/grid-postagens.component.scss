@@ -91,6 +91,9 @@
         h5 {
           font-size: 1rem;
           font-weight: 400;
+          @include lg {
+            display: none;  
+          }
         }
         h4,h5 {
           transition: all .5s ease-out;
