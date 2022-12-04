@@ -20,10 +20,4 @@ button {
     &:focus-visible {
         outline: 1px solid var(--focus);
     }
-    &.dark {
-        border: 1px solid var(--button-border-dark);
-        span {
-            color: var(--text-dark);
-        }
-    }
 }

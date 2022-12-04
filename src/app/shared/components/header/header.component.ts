@@ -35,7 +35,7 @@ export class HeaderComponent {
   }
 
   ngAfterViewInit() {
-    //   //adiciona o efeito de sombra quando o usuario scrolla a pagina
+    //adiciona o efeito de sombra quando o usuario scrolla a pagina
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
         document.body.querySelector('.header')?.classList.add('shadow');

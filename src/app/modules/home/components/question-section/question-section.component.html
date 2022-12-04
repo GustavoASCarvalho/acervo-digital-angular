@@ -3,13 +3,10 @@
         <h2>Questão da semana</h2>
         <div class="section__question">
             <div class="section__question__title">
-                <h3>Qual o nome da casa que morou serginho bengala, barão de Paranaguá ?</h3>
+                <h3>{{question.title}}</h3>
             </div>
             <div class="section__question__buttons">
-                <app-tag-button [dark]="true" [label]="'Casa colonial'"></app-tag-button>
-                <app-tag-button [dark]="true" [label]="'Casa residual'"></app-tag-button>
-                <app-tag-button [dark]="true" [label]="'Casa brumenal'"></app-tag-button>
-                <app-tag-button [dark]="true" [label]="'Casa survistal'"></app-tag-button>
+                <app-question-button [buttonStatus]="option" *ngFor="let option of question.options" (click)="respondendo(option.label)"></app-question-button>
             </div>
             <div class="section__question__image">
                 <img src="https://picsum.photos/500/500?random=20" alt="Questão do dia">

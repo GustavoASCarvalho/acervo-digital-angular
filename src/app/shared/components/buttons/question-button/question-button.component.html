@@ -1,0 +1,3 @@
+<button z-index="0" #botao [ngClass]="{'correct': buttonStatus.answer == 'correct', 'incorrect': buttonStatus.answer == 'incorrect', 'disabled': buttonStatus.status == 'disabled'}">
+    <span>{{buttonStatus.label}}</span>
+</button>

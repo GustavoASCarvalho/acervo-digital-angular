@@ -1,0 +1,43 @@
+button {
+    border: 1px solid var(--button-border-dark);
+    border-radius: 999999px;
+    padding: 9px 12px;
+    transition: all 0.3s ease;
+    span {
+        transition: all 0.3s ease;
+        color: var(--text-dark);
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+        white-space: nowrap;
+    }
+    &:hover,&:focus-visible {
+        background-color: var(--primary);
+        span {
+            color: var(--text-dark);
+        }
+    }
+    &:focus-visible {
+        outline: 1px solid var(--focus);
+    }
+
+    &.correct {
+        background-color: var(--question-success);
+        span {
+            color: var(--text-dark);
+        }
+    }
+
+    &.incorrect {
+        background-color: var(--question-error);
+        span {
+            color: var(--text-dark);
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.8;
+        cursor: not-allowed;
+    }
+}
