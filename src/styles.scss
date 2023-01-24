@@ -9,7 +9,7 @@
   --text-primary: #000000;
   --text-primary-hover: #222;
   --text-primary-contrast: #000;
-  --background: #f7ede2;
+  --background: #ffffff;
   --background-menu: #fff;
   --background-menu-hover: #dedede;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
@@ -26,27 +26,32 @@
   --button-background: #fff;
   --button-background-hover: #dedede;
   --text-primary-margin: 56px;
+  --text-secondary-margin: 32px;
   --question-error: #bb4242;
   --question-success: #42bb42;
   @include xl {
     font-size: 12.75px;
     --container-space: 400px;
     --text-primary-margin: 50px;
+    --text-secondary-margin: 28px;
   }
   @include lg {
     font-size: 12.5px;
     --container-space: 300px;
     --text-primary-margin: 44px;
+    --text-secondary-margin: 24px;
   }
   @include md {
     font-size: 12.25px;
     --container-space: 200px;
     --text-primary-margin: 38px;
+    --text-secondary-margin: 20px;
   }
   @include sm {
     font-size: 12px;
     --container-space: 100px;
     --text-primary-margin: 32px;
+    --text-secondary-margin: 16px;
   }
 }
 
