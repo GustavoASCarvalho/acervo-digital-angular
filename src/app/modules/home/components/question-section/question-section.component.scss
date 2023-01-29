@@ -24,6 +24,7 @@
     }
     &__question {
         display: grid;
+        justify-content: center;
         grid-gap: 10px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto;

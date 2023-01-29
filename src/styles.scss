@@ -31,25 +31,25 @@
   --question-success: #42bb42;
   @include xl {
     font-size: 12.75px;
-    --container-space: 400px;
+    --container-space: 300px;
     --text-primary-margin: 50px;
     --text-secondary-margin: 28px;
   }
   @include lg {
     font-size: 12.5px;
-    --container-space: 300px;
+    --container-space: 200px;
     --text-primary-margin: 44px;
     --text-secondary-margin: 24px;
   }
   @include md {
     font-size: 12.25px;
-    --container-space: 200px;
+    --container-space: 100px;
     --text-primary-margin: 38px;
     --text-secondary-margin: 20px;
   }
   @include sm {
     font-size: 12px;
-    --container-space: 100px;
+    --container-space: 50px;
     --text-primary-margin: 32px;
     --text-secondary-margin: 16px;
   }
@@ -109,6 +109,12 @@ body {
 
 *::-webkit-scrollbar {
 	width: 9px;
+  @include md {
+    width: 6px;
+  }
+  @include sm {
+    width: 3px;
+  }
 }
 
 /**  STYLE 1 */
