@@ -67,6 +67,7 @@
             overflow: hidden;
             position: relative;
             transition: scale 0.1s ease;
+            border-radius: 3px;
             &__image {
                 position: absolute;
                 width: 100%;
@@ -107,9 +108,13 @@
                 hsla(0, 0%, 0%, 0.8) 110%
                 );
             }
-            &:hover {
+            &:hover, &:focus {
                 cursor: pointer;
                 scale: 1.01;
+            }
+            &:focus-visible {
+                outline: 2px solid var(--focus);
+                outline-offset: 2px;
             }
         }
     }
