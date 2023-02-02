@@ -38,16 +38,16 @@ export class HeaderComponent {
     //adiciona o efeito de sombra quando o usuario scrolla a pagina
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
-        document.body.querySelector('.header')?.classList.add('shadow');
+        this.el.nativeElement.querySelector('.header')?.classList.add('shadow');
       } else {
-        document.body.querySelector('.header')?.classList.remove('shadow');
+        this.el.nativeElement.querySelector('.header')?.classList.remove('shadow');
       }
     });
     //fecha qualquer menu que esteja aberto quando o usuario clica fora dele
     this.el.nativeElement.addEventListener(
       'click',
       (e: { target: Element }) => {
-        if (e.target === document.querySelector('.overlay')) {
+        if (e.target === this.el.nativeElement.querySelector('.overlay')) {
           this.alterarEstado(headerState.INICIAL);
         }
       }

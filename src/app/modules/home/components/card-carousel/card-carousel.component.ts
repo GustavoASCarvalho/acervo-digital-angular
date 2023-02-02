@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-card-carousel',
@@ -30,13 +30,15 @@ export class CardCarouselComponent {
     },
   ];
 
+  constructor(private el: ElementRef) {}
+
   ngAfterViewInit() {
-    const cards = document.querySelectorAll('.cards__card');
-    cards.forEach((cardMouse, iMouse) => {
-      cardMouse.addEventListener('mouseenter', (e) => {
+    const cards = this.el.nativeElement.querySelectorAll('.cards__card');
+    cards.forEach((cardMouse: Element, iMouse: number) => {
+      cardMouse.addEventListener('mouseenter', () => {
         this.moveCards(cards, cardMouse, iMouse);
       });
-      cardMouse.addEventListener('focus', (e) => {
+      cardMouse.addEventListener('focus', () => {
         this.moveCards(cards, cardMouse, iMouse);
       });
     });
