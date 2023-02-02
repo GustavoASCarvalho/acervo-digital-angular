@@ -5,7 +5,7 @@ button {
     transition: all 0.3s ease;
     span {
         transition: all 0.3s ease;
-        color: var(--text-primary);
+        color: var(--black-to-white);
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.25rem;
@@ -14,7 +14,7 @@ button {
     &:hover,&:focus-visible {
         background-color: var(--primary);
         span {
-            color: var(--text-white);
+            color: var(--white);
         }
     }
     &:focus-visible {

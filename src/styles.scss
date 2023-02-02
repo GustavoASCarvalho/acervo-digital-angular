@@ -2,33 +2,46 @@
 @import "./assets/styles/reset";
 
 :root{
-  --primary: #F6BD60;
-  --primary-hover: #f2af44;
-  --primary-opacity: #84A59D;
-  --icons-primary: #000;
-  --text-primary: #000000;
+  // tema white
+  --white-to-black: white;
+  --black-to-white: black;
   --text-primary-hover: #222;
-  --text-primary-contrast: #000;
   --background: #ffffff;
   --background-menu: #fff;
   --background-menu-hover: #dedede;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --focus: rgb(0, 0, 0);
+  --button-border: #2b2b2b;
+  --button-background-hover: #dedede;
+
+  // demais cores
+  --primary: #F6BD60;
+  --primary-hover: #f2af44;
+  --primary-opacity: #60978a;
+  --white: white;
+  --black: black;
+  --error: #bb4242;
+  --success: #42bb42;
+  --gray: #2b2b2b;
   --padding-1: 8px;
   --padding-2: 16px;
   --padding-3: 24px;
-  --focus: rgb(0, 0, 0);
   --header-height: 56px;
   --container-space: 500px;
-  --text-white: #fff;
-  --text-dark: #000;
-  --button-border: #2b2b2b;
-  --button-border-dark: #2b2b2b;
-  --button-background: #fff;
-  --button-background-hover: #dedede;
   --text-primary-margin: 56px;
   --text-secondary-margin: 32px;
-  --question-error: #bb4242;
-  --question-success: #42bb42;
+  --overlay-gradient: linear-gradient(
+    180deg,
+  hsla(0, 0%, 35.29%, 0) -10%,
+  hsla(0, 0%, 34.53%, 0.034375) 16.36%,
+  hsla(0, 0%, 32.42%, 0.125) 33.34%,
+  hsla(0, 0%, 29.18%, 0.253125) 50.1%,
+  hsla(0, 0%, 24.96%, 0.4) 65.75%,
+  hsla(0, 0%, 19.85%, 0.546875) 79.43%,
+  hsla(0, 0%, 13.95%, 0.675) 90.28%,
+  hsla(0, 0%, 7.32%, 0.765625) 97.43%,
+  hsla(0, 0%, 0%, 0.8) 110%
+  );
   @include xl {
     font-size: 12.75px;
     --container-space: 300px;
@@ -56,24 +69,16 @@
 }
 
 :root .dark-theme{
-  --primary: #F6BD60;
-  --primary-hover: #f2af44;
-  --primary-opacity: #84A59D;
-  --icons-primary: #fff;
-  --text-primary: #fff;
+  //tema dark
+  --white-to-black: black;
+  --black-to-white: white;
   --text-primary-hover: #fff;
-  --text-primary-contrast: #000;
   --background: #181818;
   --background-menu: #202020;
   --background-menu-hover: #2b2b2b;
   --box-shadow-color: rgba(255, 255, 255, 0.1);
-  --padding-1: 8px;
-  --padding-2: 16px;
-  --padding-3: 24px;
   --focus: rgb(255, 255, 255);
-  --text-white: #fff;
   --button-border: #fff;
-  --button-background: #000;
   --button-background-hover: #2b2b2b;
 }
 
@@ -99,9 +104,11 @@ html {
   
 body {
   background-color: var(--background);
-  color: var(--text-primary);
+  color: var(--black-to-white);
   font-family: 'Inter Tight', sans-serif;
 }
+
+// scrollbar
 
 * {
   -webkit-tap-highlight-color: transparent;

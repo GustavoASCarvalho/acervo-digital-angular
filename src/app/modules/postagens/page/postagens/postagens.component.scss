@@ -5,7 +5,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: calc(var(--header-height) + var(--text-secondary-margin));
-    .cards {
+    &__cards {
         height: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -17,16 +17,16 @@
         }
         justify-items: center;
         gap: 10px;
-        .card {
+        &__card {
             font-family: "Lato";
             border-radius: 3px;
-            box-shadow: 0 0 2px -1px rgb(0, 0, 0);
+            box-shadow: 0 0 1px 2px var(--box-shadow-color);
             width: 100%;
             height: auto;
             overflow: hidden;
             display: flex;
             aspect-ratio: 10/8;
-            .box-image {
+            &__image {
                 width: 50%;
                 img {
                     width: 100%;
@@ -40,7 +40,9 @@
                     width: 30%;
                 }
             }
-            .box-text {
+            &__text {
+                color: var(--black-to-white);
+                opacity: 0.9;
                 width: 50%;
                 padding: 10px;
                 padding-top: 15px;
@@ -67,8 +69,14 @@
                 p {
                     font-weight: 300;
                     text-align: justify;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 7; /* number of lines to show */
+                    line-clamp: 7; 
+                    -webkit-box-orient: vertical;
                 }
-                .divider {
+                &__divider {
                     width: 30%;
                     height: 2px;
                     background-color: var(--primary-hover);

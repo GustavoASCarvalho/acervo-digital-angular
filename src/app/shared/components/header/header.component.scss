@@ -1,14 +1,15 @@
 @import "../../../../assets/styles/mixins";
 
 svg {
-    fill: var(--icons-primary);
+    fill: var(--black-to-white);
     height: 1.84615384616rem;
     width: 1.84615384616rem; // = 24px // 1 rem = 13px
 }
 
 .header {
-    background:var(--background-menu);
+    background: var(--background-menu);
     height: var(--header-height);
+    color: var(--black-to-white);
     position: fixed;
     left: 0;
     top: 0;
@@ -58,7 +59,7 @@ svg {
                 }
             }
         }
-        &__menu {
+        &__nav {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -80,11 +81,11 @@ svg {
                         height: 100%;
                         display: flex;
                         align-items: center;
-                        .text {
+                        &__text {
                             padding: var(--padding-1);
                             font-weight: 500;
                             text-decoration: none;
-                            color: var(--text-primary);
+                            color: var(--black-to-white);
                             border-top: 3px solid transparent;
                             border-bottom: 3px solid transparent;
                             position: relative;
@@ -274,10 +275,10 @@ svg {
                     width: 100%;
                     height: 56px;
                     background: transparent;
-                    color: var(--text-primary);
+                    color: var(--black-to-white);
                     &::placeholder
                     {
-                        color: var(--text-primary);
+                        color: var(--black-to-white);
                         opacity: 0.5;
                     }
                 }
@@ -292,7 +293,7 @@ svg {
             border-radius: 0 0 16px 16px;
             h2 {
                 text-transform: uppercase;
-                color: var(--text-primary);
+                color: var(--black-to-white);
                 margin: 0 32px;
                 margin-top: 10px;
                 opacity: 1;
@@ -329,7 +330,7 @@ svg {
                     display: inline-block;
                     width: 100%;
                     padding: 8px 50px;
-                    color: var(--text-primary);
+                    color: var(--black-to-white);
                     text-decoration: none;
                     font-weight: 400;
                     border-radius: 4px;
@@ -369,6 +370,7 @@ svg {
 
 .slider {
     background-color: var(--background-menu);
+    color: var(--black-to-white);
     width: 30%;
     margin: 0 auto;
     position: fixed;
