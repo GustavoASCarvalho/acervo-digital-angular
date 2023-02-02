@@ -40,6 +40,38 @@ const routes: Routes = [
       desc: 'Postagens sobre a história de Paranaguá e seus personagens.',
     },
   },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./modules/login/login.module').then((m) => m.LoginModule),
+    data: {
+      title: 'Login Acervo Digital de Paranaguá',
+      desc: 'Faça login para acessar o acervo digital de Paranaguá.',
+    },
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () =>
+      import('./modules/cadastro/cadastro.module').then(
+        (m) => m.CadastroModule
+      ),
+    data: {
+      title: 'Cadastro Acervo Digital de Paranaguá',
+      desc: 'Cadastre-se para acessar o acervo digital de Paranaguá.',
+    },
+  },
+  {
+    path: '**',
+    // loadChildren: () =>
+    //   import('./modules/not-found/not-found.module').then(
+    //     (m) => m.NotFoundModule
+    //   ),
+    // data: {
+    //   title: 'Página não encontrada',
+    //   desc: 'Página não encontrada.',
+    // },
+    redirectTo: '',
+  }
 ];
 
 @NgModule({
