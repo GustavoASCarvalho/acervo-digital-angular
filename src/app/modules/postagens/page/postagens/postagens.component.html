@@ -1,13 +1,13 @@
 <div class="container">
-    <div class="cards">
-        <a class="card" tabindex="0" *ngFor="let item of itens">
-            <div class="box-image">
+    <div class="container__cards">
+        <a class="container__cards__card" tabindex="0" *ngFor="let item of itens">
+            <div class="container__cards__card__image">
                 <img src="{{item.urlImagem}}">
             </div>
-            <div class="box-text">
+            <div class="container__cards__card__text">
                 <h2>{{item.data}}</h2>
                 <h1>{{item.titulo}}</h1>
-                <div class="divider"></div>
+                <div class="container__cards__card__text__divider"></div>
                 <p>{{item.descricaoCurta}}</p>
             </div>
         </a>

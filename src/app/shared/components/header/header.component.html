@@ -11,25 +11,25 @@
                 <strong>Acervo</strong> Digital de Paranaguá
             </h1>
         </div>
-        <nav class="header__menu__menu">
+        <nav class="header__menu__nav">
             <ul>
                 <li><a [attr.tabindex]="estado == 0 ? 0 : -1" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}" [routerLink]="['']"><span>
-                            <div class="text">Página
+                            <div class="header__menu__nav__text">Página
                                 Inicial</div>
                         </span></a></li>
                 <li><a [attr.tabindex]="estado == 0 ? 0 : -1" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/acervo']"><span>
-                            <div class="text">Acervo</div>
+                            <div class="header__menu__nav__text">Acervo</div>
                         </span></a>
                 </li>
                 <li><a [attr.tabindex]="estado == 0 ? 0 : -1" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/postagens']"><span>
-                            <div class="text"> Postagens</div>
+                            <div class="header__menu__nav__text"> Postagens</div>
                         </span></a></li>
                 <li><a [attr.tabindex]="estado == 0 ? 0 : -1" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/explore']"><span>
-                            <div class="text">Explore</div>
+                            <div class="header__menu__nav__text">Explore</div>
                         </span></a>
                 </li>
             </ul>
