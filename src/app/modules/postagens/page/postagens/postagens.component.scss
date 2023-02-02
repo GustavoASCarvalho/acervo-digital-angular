@@ -1,0 +1,94 @@
+@import "../../../../../assets/styles/mixins";
+
+.container {
+    width: calc(100% - var(--container-space));
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(var(--header-height) + var(--text-secondary-margin));
+    .cards {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include lg {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include sm {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        justify-items: center;
+        gap: 10px;
+        .card {
+            font-family: "Lato";
+            border-radius: 3px;
+            box-shadow: 0 0 2px -1px rgb(0, 0, 0);
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            aspect-ratio: 10/8;
+            .box-image {
+                width: 50%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                @include lg {
+                    width: 40%;
+                }
+                @include sm {
+                    width: 30%;
+                }
+            }
+            .box-text {
+                width: 50%;
+                padding: 10px;
+                padding-top: 15px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include lg {
+                    width: 60%;
+                }
+                @include sm {
+                    width: 70%;
+                }
+                h1 {
+                    font-family: "Playfair Display SC";
+                    font-size: 30px;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+                h2 {
+                    text-transform: uppercase;
+                    font-size: 10px;
+                }
+                p {
+                    font-weight: 300;
+                    text-align: justify;
+                }
+                .divider {
+                    width: 30%;
+                    height: 2px;
+                    background-color: var(--primary-hover);
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+            transition: scale 0.1s ease;
+            &:hover, &:focus {
+                cursor: pointer;
+                scale: 1.01;
+                &:focus-visible {
+                    outline: 2px solid var(--focus);
+                    outline-offset: 2px;
+                }
+            }
+           
+        }
+    }
+}
+
+
+
