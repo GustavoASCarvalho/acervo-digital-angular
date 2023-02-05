@@ -2,7 +2,7 @@
     <div class="container__cards">
         <a class="container__cards__card" tabindex="0" *ngFor="let item of itens">
             <div class="container__cards__card__image">
-                <img src="{{item.urlImagem}}">
+                <img src="{{item.urlImagem}}" loading="lazy">
             </div>
             <div class="container__cards__card__text">
                 <h2>{{item.data}}</h2>

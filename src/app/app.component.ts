@@ -11,6 +11,7 @@ import { filter, map } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   isOnline: boolean;
+  showHeader: boolean = true;
   constructor(
     private swUpdate: SwUpdate,
     private router: Router,
@@ -29,7 +30,11 @@ export class AppComponent implements OnInit {
       .subscribe(() => {
         let route = this.getChild(this.activatedRoute);
         let data = route.snapshot.data;
-
+        if (data.hideHeader) {
+          this.showHeader = false;
+        }else {
+          this.showHeader = true;
+        }
         if (this.swUpdate.isEnabled) {
           this.swUpdate.versionUpdates.pipe(
             filter(
@@ -60,6 +65,7 @@ export class AppComponent implements OnInit {
           this.metaService.removeTag("name='description'");
         }
       });
+    
   }
   getChild(activatedRoute: ActivatedRoute): any {
     if (activatedRoute.firstChild)

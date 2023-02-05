@@ -6,7 +6,7 @@
         </form>
         <ul class="content__cards">
             <li class="content__cards__card" *ngFor="let item of itens" tabindex="0">
-                <div class="content__cards__card__image" [ngStyle]="{'background-image': 'url('+ item.imageUrl +')'}"></div>
+                <img class="content__cards__card__image" src="{{item.imageUrl}}" alt="{{item.title}}" loading="lazy">
                 <span class="content__cards__card__text">Nome da imagem</span>
                 <div class="content__cards__card__overlay"></div>
             </li>

@@ -47,6 +47,7 @@ const routes: Routes = [
     data: {
       title: 'Login Acervo Digital de Paranaguá',
       desc: 'Faça login para acessar o acervo digital de Paranaguá.',
+      hideHeader: true,
     },
   },
   {

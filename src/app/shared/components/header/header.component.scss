@@ -182,7 +182,7 @@ svg {
                 padding-left: var(--padding-1);
                 padding-right: var(--padding-2);
     
-                button {
+                a {
                     white-space: nowrap;
                     cursor: pointer;
                     background-color: var(--primary);
@@ -487,8 +487,8 @@ svg {
             p{
                 margin-left: 10px;
             }
-            &:hover{
-                svg {
+            &:hover, &:focus {
+                svg { 
                     opacity: 1;
                 }
             }
