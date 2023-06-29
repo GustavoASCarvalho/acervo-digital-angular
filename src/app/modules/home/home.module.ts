@@ -11,7 +11,14 @@ import { TagsSectionComponent } from './components/tags-section/tags-section.com
 import { HistoryDaySectionComponent } from './components/history-day-section/history-day-section.component';
 
 @NgModule({
-  declarations: [HomeComponent, CardCarouselComponent, GridPostagensComponent, QuestionSectionComponent, TagsSectionComponent, HistoryDaySectionComponent],
+  declarations: [
+    HomeComponent,
+    CardCarouselComponent,
+    GridPostagensComponent,
+    QuestionSectionComponent,
+    TagsSectionComponent,
+    HistoryDaySectionComponent,
+  ],
   imports: [CommonModule, HomeRoutingModule, SharedModule],
 })
 export class HomeModule {}

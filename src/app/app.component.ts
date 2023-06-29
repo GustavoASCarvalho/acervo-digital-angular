@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
         let data = route.snapshot.data;
         if (data.hideHeader) {
           this.showHeader = false;
-        }else {
+        } else {
           this.showHeader = true;
         }
         if (this.swUpdate.isEnabled) {
@@ -65,7 +65,6 @@ export class AppComponent implements OnInit {
           this.metaService.removeTag("name='description'");
         }
       });
-    
   }
   getChild(activatedRoute: ActivatedRoute): any {
     if (activatedRoute.firstChild)
