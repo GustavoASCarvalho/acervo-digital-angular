@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "./assets/styles/mixins";
 @import "./assets/styles/reset";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 :root {
   // tema white
@@ -17,7 +22,10 @@
   --white-200: #ddd;
   --background-input: #2b2b2b85;
 
-  // demais cores
+  --text-primary: #3c4043;
+  --text-secondary: #80868b;
+
+  // demais variaveis
   --primary: #f6bd60;
   --primary-hover: #f2af44;
   --primary-opacity: #60978a;
@@ -45,6 +53,7 @@
     hsla(0, 0%, 7.32%, 0.765625) 97.43%,
     hsla(0, 0%, 0%, 0.8) 110%
   );
+  --primary-font: "Open Sans", sans-serif;
   @include xl {
     font-size: 12.75px;
     --container-space: 300px;
@@ -76,6 +85,8 @@
   --white-to-black: black;
   --black-to-white: white;
   --text-primary-hover: #fff;
+  --text-primary: #fff;
+  --text-secondary: #f0f0f0;
   --background: #181818;
   --background-menu: #202020;
   --background-menu-hover: #2b2b2b;
@@ -89,7 +100,7 @@
 }
 
 html {
-  font-size: 13px;
+  font-size: 10px;
   @include xl {
     font-size: 12.75px;
   }
@@ -112,8 +123,8 @@ html {
 
 body {
   background-color: var(--background);
-  color: var(--black-to-white);
-  font-family: "Inter Tight", sans-serif;
+  font-family: var(--primary-font);
+  color: var(--text-primary);
 }
 
 // scrollbar

@@ -2,16 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CadastroRoutingModule } from './cadastro-routing.module';
-import { CadastroComponent } from './page/cadastro.component';
-
+import { CadastroComponent } from './page/cadastro/cadastro.component';
 
 @NgModule({
-  declarations: [
-    CadastroComponent
-  ],
-  imports: [
-    CommonModule,
-    CadastroRoutingModule
-  ]
+  declarations: [CadastroComponent],
+  imports: [CommonModule, CadastroRoutingModule],
 })
-export class CadastroModule { }
+export class CadastroModule {}

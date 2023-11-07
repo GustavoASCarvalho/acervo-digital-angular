@@ -63,6 +63,15 @@ const routes: Routes = [
     },
   },
   {
+    path: 'imagem/:id',
+    loadChildren: () =>
+      import('./modules/imagem/imagem.module').then((m) => m.ImagemModule),
+    data: {
+      title: 'Imagem Acervo Digital de Paranaguá',
+      desc: 'Imagem do acervo digital de Paranaguá.',
+    },
+  },
+  {
     path: '**',
     // loadChildren: () =>
     //   import('./modules/not-found/not-found.module').then(
@@ -73,7 +82,7 @@ const routes: Routes = [
     //   desc: 'Página não encontrada.',
     // },
     redirectTo: '',
-  }
+  },
 ];
 
 @NgModule({

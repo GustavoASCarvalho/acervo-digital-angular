@@ -1,0 +1,96 @@
+svg {
+  fill: var(--black-to-white);
+  height: 1.84615384616rem;
+  width: 1.84615384616rem; // = 24px // 1 rem = 13px
+}
+
+.content {
+  margin: calc(var(--header-height) + var(--text-secondary-margin)) 0;
+  height: auto;
+  width: 100%;
+  .section {
+    width: calc(100% - var(--container-space));
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__imagem {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 590px;
+    height: fit-content;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 48px;
+    & > img {
+      max-height: 590px;
+      height: auto;
+    }
+    &__download {
+      display: none;
+      position: absolute;
+      bottom: -24px;
+      right: 10px;
+      z-index: 10;
+      & > button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--background);
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+      }
+    }
+  }
+  &__info {
+    border-top: 1px solid rgb(218, 220, 224);
+    width: 100%;
+    &__header {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-top: 48px;
+      &__1 {
+        width: 70%;
+        font-weight: 500;
+        > h2 {
+          font-size: 1.5rem;
+          padding-bottom: 5px;
+        }
+        > h3 {
+          padding-bottom: 10px;
+          font-size: 1.3rem;
+          color: var(--text-secondary);
+          > span:nth-child(1) {
+            margin-right: 12px;
+          }
+        }
+        &__actions {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2.5rem;
+          button {
+            width: 2.5rem;
+            height: 2.5rem;
+            > svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      &__2 {
+        text-align: end;
+        width: 30%;
+      }
+    }
+  }
+}
